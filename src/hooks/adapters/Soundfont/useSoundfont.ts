@@ -10,9 +10,9 @@ interface Adapter {
 	loading: boolean
 	current: Optional<InstrumentName>
 
-	load(instrument: InstrumentName): Promise<void>
-	play(note: MidiValue): Promise<void>
-	stop(note: MidiValue): Promise<void>
+	load: (instrument: InstrumentName) => Promise<void>
+	play: (note: MidiValue) => Promise<void>
+	stop: (note: MidiValue) => Promise<void>
 }
 
 export const useSoundfont = ({ AudioContext }: Settings): Adapter => {
