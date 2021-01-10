@@ -1,81 +1,48 @@
+@import './styles/instrumentSelector.css';
+@import './styles/key.css';
+@import './styles/logo.css';
+@import './styles/footer.css';
+
+:root {
+  --footer-height: 60px;
+  --logo-height: 8rem;
+}
+
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
-}
-
-:root {
-	--footer-height: 60px;
-	--logo-height: 8rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
-}
-
-.app {
-	min-height: 100vh;
-}
-
-.app-content {
-	--offset: calc(var(--footer-height)+var(--logo-height));
-	min-height: calc(100vh-var(--offset));
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  box-sizing: border-box;
 }
 
 button {
-	border: none;
-	border-radius: 0;
-	margin: 0;
-	padding: 0;
-	width: auto;
-	background: none;
-	appearance: none;
-	color: inherit;
-	font: inherit;
-	line-height: normal;
-	cursor: pointer;
-	-webkit-font-smoothing: inherit;
-	-moz-osx-font-smoothing: inherit;
-}
+  border: none;
+  border-radius: 0;
 
-.key {
-	position: relative;
-	font-size: var(--font-size);
-	border-radius: 00var (--radius) var(--radius);
-	text-transform: uppercase;
-	user-select: none;
-}
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: none;
+  appearance: none;
 
-.key--natural {
-	width: var(--white-key-width);
-	height: var(--white-key-height);
-	padding-top: var(--white-key-padding);
-	border: 1px solid rgba (0, 0, 0, 0.1);
-	color: rgba(0, 0, 0, 0.4);
-	margin-right: -1px;
-	z-index: 1;
-}
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
 
-.key--sharp,
-.key--flat {
-	width: var(--black-key-width);
-	height: var(--black-key-height);
-	padding-top: var(--black-key-padding);
-	background-color: #111;
-	color: white;
-	margin: 0calc (-0.5 * calc(var(--black-key-width)));
-	z-index: 2;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 }

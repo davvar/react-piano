@@ -1,4 +1,6 @@
-export * from './adapters/Soundfont/useSoundfont';
 export * from './useAudioContext';
-export * from './useMount';
+export * from './useInstrument';
+export * from './usePressObserver';
+export * from './useSoundfont';
+
 

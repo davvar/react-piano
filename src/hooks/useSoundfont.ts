@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import Soundfont, { InstrumentName, Player } from 'soundfont-player';
-import { AudioNodesRegistry, MidiValue } from '../../../domain';
+import { AudioNodesRegistry, MidiValue } from '../domain';
 
 interface Settings {
 	AudioContext: AudioContextType

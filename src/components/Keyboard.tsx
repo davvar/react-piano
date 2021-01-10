@@ -10,7 +10,7 @@ interface IProps {
 
 export const Keyboard: FC<IProps> = ({ loading, play, stop }) => {
 	return (
-		<div className='keyboard'>
+		<div style={{ display: 'flex' }}>
 			{notes.map(({ index, midi, octave, type }) => {
 				const label = selectKey(octave, index)
 				return (

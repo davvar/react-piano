@@ -1,13 +1,18 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Keyboard } from '.';
-import { useAudioContext, useMount, useSoundfont } from '../hooks';
+import { useAudioContext, useInstrument, useSoundfont } from '../hooks';
 
 export const KeyboardWithInstrument: FC = () => {
 	const AudioContext = useAudioContext()!
+	const { load, current, ...props } = useSoundfont({ AudioContext })
+	const { instrument } = useInstrument()
+	const { loading } = props
 
-	const { load, ...props } = useSoundfont({ AudioContext })
-
-	useMount(load)
+	useEffect(() => {
+		if (!loading && instrument !== current) {
+			load(instrument)
+		}
+	}, [load, loading, current, instrument])
 
 	return <Keyboard {...props} />
 }

@@ -4,9 +4,9 @@ import { Footer, Logo, Main } from './components';
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='app'>
 			<Logo />
-			<main className='app-content'>
+			<main className='app-content logo'>
 				<Main />
 			</main>
 			<Footer />
